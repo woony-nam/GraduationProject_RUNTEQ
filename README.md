@@ -41,8 +41,8 @@
 
 ### その後の機能
 * いいね機能
-* 投稿機能（写真/Tag）
+* 投稿機能（写真/Tag/コメント）
 * 検索機能（Tag）
 * おすすめ機能 or 診断機能 #検討中
 * "日本酒が飲めるお店" "日本酒が買えるお店" ページ #検討中
-* Google Cloud Translation API導入
+* Google Cloud Translation APIを導入
