@@ -46,3 +46,6 @@
 * おすすめ機能 or 診断機能 #検討中
 * "日本酒が飲めるお店" "日本酒が買えるお店" ページ #検討中
 * Google Cloud Translation APIを導入
+
+## 画面遷移図
+figma: https://www.figma.com/board/4al43cGJZwYYX5fmAbBPqA/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=vEWEZS0kIoaq6Bae-0
