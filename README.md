@@ -48,4 +48,4 @@
 * Google Cloud Translation APIを導入
 
 ## 画面遷移図
-figma: https://www.figma.com/board/4al43cGJZwYYX5fmAbBPqA/%E7%84%A1%E9%A1%8C?node-id=0-1&node-type=canvas&t=vEWEZS0kIoaq6Bae-0
+figma: https://www.figma.com/board/4al43cGJZwYYX5fmAbBPqA/%E7%84%A1%E9%A1%8C?t=vEWEZS0kIoaq6Bae-1
