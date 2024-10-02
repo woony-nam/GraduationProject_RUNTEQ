@@ -1,4 +1,4 @@
-Figma：https://www.figma.com/board/4al43cGJZwYYX5fmAbBPqA/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?t=AzCZJhPN1oR3k02n-1
+Figma：https://www.figma.com/design/NHPyRC0mYvcfGcGRDGaaoN/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?t=sk7egHOWbTx7VJl0-1
 
 ### READMEに記載した機能
 - [x] 会員登録へ進むボタン
@@ -7,7 +7,6 @@ Figma：https://www.figma.com/board/4al43cGJZwYYX5fmAbBPqA/%E7%94%BB%E9%9D%A2%E9
 - [x] 会員登録機能
 - [x] ログイン機能へ進むボタン
 　- ログイン機能
-- [x] マイページ
 - [x] 投稿一覧
 - [x] 新規投稿作成ページ
 - [x] 検索機能（ 題名 or 銘柄 or UserName）
