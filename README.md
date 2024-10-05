@@ -1,8 +1,11 @@
-### 画面遷移図
-Figma：https://www.figma.com/design/NHPyRC0mYvcfGcGRDGaaoN/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?t=sk7egHOWbTx7VJl0-1
-
 ### ER図
 ![My Image]([![Image from Gyazo](https://i.gyazo.com/dddcb025119af6eab564509606786045.png)](https://gyazo.com/dddcb025119af6eab564509606786045))
+
+### 本サービスの概要
+-飲んだ日本酒を記録する
+-日本酒情報を共有する
+-飲んでみたい日本酒を探す
+-日本酒を知る
 
 ### READMEに記載した機能
 - [x] 会員登録へ進むボタン
