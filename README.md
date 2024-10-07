@@ -28,3 +28,11 @@
 - [x] カラムの型は記載されているか？
 - [x] STIは使用しないER図になっているか？
 - [x] Postsテーブルにpoast_nameのように"テーブル名+カラム名"を付けていないか？
+
+### postsについて
+- id ->投稿ID
+- uer_id ->投稿者ID
+- title ->投稿のタイトル
+- brand ->銘柄
+- rating ->5段階評価
+- created_at ->投稿日時
