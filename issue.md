@@ -8,7 +8,7 @@
 - 1週間あたり：45時間
 
 ### ProjectsのURL
-[ファイル名：Graduation Project](https://github.com/users/woony-nam/projects/1)
+[ファイル名：Graduation Project](https://github.com/users/woony-nam/projects/1/views/1)
 
 ### MVPリリースまで
 ## 下記の作成
