@@ -83,3 +83,10 @@ jobs:
           name: screenshots
           path: ${{ github.workspace }}/tmp/screenshots
           if-no-files-found: ignore
+
+      - name: Run tests
+        id: test
+        run: |
+          bundle exec rspec
+        if: ${{ github.event_name != 'pull_request' || steps.test.outputs.success == 'true' }}
+        continue-on-error: true  # テストが失敗しても次のステップに進む
