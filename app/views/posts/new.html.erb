@@ -1,0 +1,14 @@
+<h2>新規投稿</h2>
+<%= form_with(model: @post, local: true) do |f| %>
+  <%= f.label :title, "タイトル" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :sake_name, "日本酒の銘柄" %>
+  <%= f.text_field :sake_name %>
+
+  <%= f.label :taste_rating, "口当たり (1-5)" %>
+  <%= f.select :taste_rating, options_for_select([1, 2, 3, 4, 5]) %>
+
+  <%= f.submit "投稿する", class: "btn btn-primary" %>
+  <%= link_to "キャンセル", main_path, class: "btn btn-secondary" %>
+<% end %>

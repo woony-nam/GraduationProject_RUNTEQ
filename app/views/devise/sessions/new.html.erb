@@ -1,17 +1,10 @@
 <h2>ログイン</h2>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
 
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
 
-  <div>
-    <%= f.submit "ログイン" %>
-  </div>
+  <%= f.submit "ログイン", class: "btn btn-primary" %>
 <% end %>
