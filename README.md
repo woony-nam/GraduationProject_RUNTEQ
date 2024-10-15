@@ -1,24 +1,51 @@
-# README
+# [日本酒いかが]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービス概要
+-飲んだ日本酒を記録する
+-日本酒情報を共有する
+-飲んでみたい日本酒を探す
+-日本酒を知る
 
-Things you may want to cover:
+##　想定されるユーザー層
+-男女問わず
+-国籍問わず
+-20歳以上（だが高めの年齢層が予想される）
+-お酒好き
+-日本酒について知りたい
+-感性や情緒を重視する趣向
 
-* Ruby version
+## サービスコンセプト
+-'辛口or甘口'/'爽やかorフルーティー'など銘柄によって味や香り、さらには製造方法まで様々な違いを持つ日本酒。
+  国内だけでなく海外からの人気も高まっていますが、その特徴ゆえに情報収集が難しいテーマの一つではないかと思います。
 
-* System dependencies
+-外国籍の友人から以前このような話を聞きました。 
+  "日本酒に興味はあるが種類が沢山ありすぎてわからない"
+  "誰でも知っているような日本酒じゃなくてマイナーなものも飲んでみたいけど、外国人にとっては言葉の壁があってマイナーなものを探すことすら難しい"
+  私もしばしば日本酒を口にする機会がありますが、好みの一杯に巡り合うことが出来なかったり、お店のドリンク欄に並ぶ数々の日本酒を見て決めかねてしまったり...
 
-* Configuration
+-一方で愛好家の中には、飲んだ日本酒の写真を撮って記録をする人や自身の日本酒知識を誰かに伝えたいと思っている人が一定数いるそうです。
 
-* Database creation
+-日本が世界に誇るSAKE(日本酒)。
+  日本酒を好む人たちが分け隔てなく交流でき、かつ簡単に情報共有・情報収集ができるツールを作りたくて[日本酒いかが]を考案しました。
 
-* Database initialization
+-多言語対応が差別化ポイントです。
 
-* How to run the test suite
+## 実装を予定している機能
+### MVP
+* 会員登録時に、20歳以上であることの確認画面を表示
+* 会員登録
+* ログイン
+* I18nを用いた多言語対応（Engliish/Korean）
+* 投稿機能（銘柄/5段階評価の感想）
+* 検索機能（キーワード）
 
-* Services (job queues, cache servers, search engines, etc.)
+### その後の機能
+* いいね機能
+* 投稿機能（写真/Tag/コメント）
+* 検索機能（Tag）
+* おすすめ機能 or 診断機能 #検討中
+* "日本酒が飲めるお店" "日本酒が買えるお店" ページ #検討中
+* Google Cloud Translation APIを導入
 
-* Deployment instructions
-
-* ...
+## 画面遷移図
+figma: https://www.figma.com/board/4al43cGJZwYYX5fmAbBPqA/%E7%84%A1%E9%A1%8C?t=vEWEZS0kIoaq6Bae-1
