@@ -1,0 +1,23 @@
+<div class="header">
+  <h1>アプリ名</h1>
+  <%= form_with url: search_path, method: :get do %>
+    <%= text_field_tag :query, nil, placeholder: '検索' %>
+    <%= submit_tag '検索' %>
+  <% end %>
+</div>
+
+<div class="sidebar">
+  <%= link_to '新規投稿', new_post_path %>
+  <%= link_to 'メニュー', menu_path %>
+</div>
+
+<div class="content">
+  <h2>投稿一覧</h2>
+  <% @posts.each do |post| %>
+    <div>
+      <p>ユーザーネーム: <%= post.user.username %></p>
+      <p>タイトル: <%= post.title %></p>
+      <p>投稿日: <%= post.created_at.strftime('%Y-%m-%d') %></p>
+    </div>
+  <% end %>
+</div>
