@@ -5,5 +5,5 @@ class Post < ApplicationRecord
   # Validation
   validates :title, presence: true
   validates :sake_name, presence: true
-  validates :taste, presence: true, inclusion: { in: 1..5 }
+  validates :taste_rating, presence: true, inclusion: { in: 1..5 }
 end
