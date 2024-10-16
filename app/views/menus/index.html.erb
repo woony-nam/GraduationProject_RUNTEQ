@@ -1,8 +1,20 @@
+<div class="header">
+  <h1>メニュー</h1>
+  <p>ログイン中のユーザー: <%= current_user.username if user_signed_in? %></p>
+</div>
+
 <div class="sidebar">
-  <%= link_to '新規投稿', new_post_path %>
-  <%= link_to 'メニュー', menu_path %>  <!-- menu_path へのリンク -->
+  <%= link_to 'ユーザー情報変更', edit_user_path(current_user), class: 'btn btn-primary' %>
+  <%= link_to '投稿一覧へ', main_path %>
 </div>
 
 <div class="content">
-  <!-- コンテンツ -->
+  <h2>あなたの投稿一覧</h2>
+  <% @user_posts.each do |post| %>
+    <div>
+      <h3><%= link_to post.title, post_path(post) %></h3>
+      <p>銘柄: <%= post.sake_name %></p>
+      <p>投稿日: <%= post.created_at.strftime('%Y-%m-%d') %></p>
+    </div>
+  <% end %>
 </div>

@@ -1,0 +1,39 @@
+<div class="header">
+  <h1>アプリ名</h1>
+  <%= link_to '投稿一覧へ', posts_path %>
+</div>
+
+<div class="content">
+  <h2>投稿を編集</h2>
+  <%= form_with(model: @post, local: true) do |form| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "エラー") %>が発生しました:</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div>
+      <%= form.label :sake_name %>
+      <%= form.text_field :sake_name %>
+    </div>
+
+    <div>
+      <%= form.label :taste_rating %>
+      <%= form.number_field :taste_rating, in: 1..5 %>
+    </div>
+
+    <div>
+      <%= form.submit "更新", class: "bg-blue-500 text-white p-2 rounded" %>
+    </div>
+  <% end %>
+</div>

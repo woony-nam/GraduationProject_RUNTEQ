@@ -19,6 +19,7 @@
     <div>
     <%= form.submit "Search", class: "bg-blue-500 text-white p-2 rounded" %>
     </div>
+    <p>ログイン中: <%= current_user.username %></p>
   <% end %>
 </div>
 
@@ -31,8 +32,8 @@
   <h2>投稿一覧</h2>
   <% @posts.each do |post| %>
     <div>
-      <p>ユーザーネーム: <%= post.user.username %></p>
-      <p>タイトル: <%= post.title %></p>
+      <h2><%= link_to post.title, post_path(post) %></h2>
+      <p>Posted by: <%= post.user.username %></p>
       <p>投稿日: <%= post.created_at.strftime('%Y-%m-%d') %></p>
     </div>
   <% end %>
