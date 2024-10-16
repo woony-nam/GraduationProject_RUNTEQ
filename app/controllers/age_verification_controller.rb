@@ -21,5 +21,4 @@ class AgeVerificationController < ApplicationController
       redirect_to root_path, alert: "20歳以上の方のみご利用いただけます。" # Noを選んだ場合、ホームにリダイレクト
     end
   end
-
 end

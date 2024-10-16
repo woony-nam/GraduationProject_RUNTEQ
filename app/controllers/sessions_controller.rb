@@ -1,6 +1,6 @@
 class SessionsController < Devise::SessionsController
   # ログインページにアクセスする前に実行されるアクション
-  prepend_before_action :check_logged_in, only: [:new]
+  prepend_before_action :check_logged_in, only: [ :new ]
 
   def new
     super
