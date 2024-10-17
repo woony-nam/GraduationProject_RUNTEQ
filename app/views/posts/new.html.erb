@@ -22,7 +22,7 @@
     <div class="card bg-base-300 rounded-box">
       <div class="p-4">
         <%= f.label :taste_rating, "口当たり (1-5)", class: "text-xl font-bold" %>
-        <div class="rating rating-lg flex items-center">
+        <div class="rating rating-lg flex items-center overflow-x-auto"> <!-- overflow-x-autoを追加 -->
           <%= f.radio_button :taste_rating, 1, class: "rating-hidden" %>
           <%= f.radio_button :taste_rating, 2, class: "mask mask-star-2" %>
           <%= f.radio_button :taste_rating, 3, class: "mask mask-star-2" %>
