@@ -1,10 +1,10 @@
-<h1>Search Results</h1>
-<p>Found <%= @posts.count %> results:</p>
+<h1>検索結果</h1>
+<p>該当 <%= @posts.count %> 件:</p>
 
 <% @posts.each do |post| %>
   <div>
     <h2><%= link_to post.title, post_path(post) %></h2>
-    <p>Sake Name: <%= post.sake_name %></p>
-    <p>Posted by: <%= post.user.username %></p>
+    <p>銘柄: <%= post.sake_name %></p>
+    <p>投稿者: <%= post.user.username %></p>
   </div>
 <% end %>

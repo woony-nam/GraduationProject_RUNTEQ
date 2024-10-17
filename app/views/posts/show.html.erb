@@ -1,24 +1,25 @@
 <div class="header">
-  <h1>アプリ名</h1>
+  <h1>日本酒いかが</h1>
   <%= form_with url: search_path, method: :get, local: true, class: "flex items-center space-x-2" do |form| %>
     <div>
-      <label for="title">Title:</label>
-      <%= text_field_tag :title, params[:title], placeholder: "Search by title" %>
+      <label for="title">タイトル:</label>
+      <%= text_field_tag :title, params[:title], placeholder: "タイトルで検索" %>
     </div>
 
     <div>
-      <label for="sake_name">Sake Name:</label>
-      <%= text_field_tag :sake_name, params[:sake_name], placeholder: "Search by sake name" %>
+      <label for="sake_name">銘柄:</label>
+      <%= text_field_tag :sake_name, params[:sake_name], placeholder: "銘柄で検索" %>
     </div>
 
     <div>
-      <label for="username">Username:</label>
-      <%= text_field_tag :username, params[:username], placeholder: "Search by username" %>
+      <label for="username">ユーザーネーム:</label>
+      <%= text_field_tag :username, params[:username], placeholder: "ユーザーネームで検索" %>
     </div>
 
     <div>
-      <%= form.submit "Search", class: "bg-blue-500 text-white p-2 rounded" %>
+      <%= form.submit "検索", class: "bg-blue-500 text-white p-2 rounded" %>
     </div>
+    <p>ログイン中: <%= current_user.username %></p>
   <% end %>
 </div>
 
@@ -31,10 +32,16 @@
 <div class="content">
   <h1><%= @post.title %></h1>
   <p><strong>銘柄:</strong> <%= @post.sake_name %></p>
-  <p><strong>口当たり:</strong> <%= @post.taste_rating %>/5</p>
+  <p><strong>口当たり:</strong></p>
+  <div class="rating rating-lg flex items-center">
+    <% (1..5).each do |value| %>
+      <%= radio_button_tag "taste_rating", value, @post.taste_rating == value, class: "mask mask-star-2", disabled: true %>
+    <% end %>
+  </div>
   <p><strong>投稿者 by:</strong> <%= @post.user.username %></p>
   <p><strong>投稿日 at:</strong> <%= @post.created_at.strftime('%B %d, %Y') %></p>
 
   <%= link_to '編集する', edit_post_path(@post), class: 'btn btn-primary' if current_user == @post.user %>
   <%= link_to '削除する', post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' if current_user == @post.user %>
 </div>
+

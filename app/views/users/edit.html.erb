@@ -26,5 +26,11 @@
     <%= form.submit "更新", class: "bg-blue-500 text-white p-2 rounded" %>
   </div>
 
-  <%= link_to 'アカウントを削除', user_path(current_user), method: :delete, data: { confirm: '本当にアカウントを削除しますか？' }, class: "btn btn-danger" %>
+  <div>
+    <%= link_to 'アカウントを削除', user_path(current_user), method: :delete, data: { confirm: '本当にアカウントを削除しますか？' }, class: "btn btn-danger" %>
+  </div>
+
+  <div class="mt-4">
+    <%= link_to 'メインページに戻る', main_path, class: "btn btn-secondary" %>
+  </div>
 <% end %>
