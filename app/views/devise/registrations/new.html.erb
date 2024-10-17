@@ -1,15 +1,15 @@
 <h2>新規登録</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.label :username %>
+  <%= f.label :username, "ユーザーネーム" %>
   <%= f.text_field :username %>
 
-  <%= f.label :email %>
+  <%= f.label :email, "メールアドレス" %>
   <%= f.email_field :email %>
 
-  <%= f.label :password %>
+  <%= f.label :password, "パスワード" %>
   <%= f.password_field :password %>
 
-  <%= f.label :password_confirmation %>
+  <%= f.label :password_confirmation, "パスワード確認" %>
   <%= f.password_field :password_confirmation %>
 
   <%= f.submit "登録", class: "btn btn-primary" %>

@@ -1,18 +1,44 @@
 <h2>新規投稿</h2>
 <%= form_with(model: @post, local: true) do |f| %>
-  <%= f.label :title, "タイトル" %>
-  <%= f.text_field :title %>
+  <div class="flex flex-col space-y-4">
+    <div class="card bg-base-300 rounded-box">
+      <div class="p-4">
+        <%= f.label :title, "タイトル" %>
+        <%= f.text_field :title, class: "input input-bordered border-black w-full" %>
+      </div>
+    </div>
 
-  <%= f.label :sake_name, "日本酒の銘柄" %>
-  <%= f.text_field :sake_name %>
+    <div class="divider"></div>
 
-  <%= f.label :taste_rating, "口当たり (1-5)" %>
-  <%= f.select :taste_rating, options_for_select([1, 2, 3, 4, 5]) %>
+    <div class="card bg-base-300 rounded-box">
+      <div class="p-4">
+        <%= f.label :sake_name, "銘柄" %>
+        <%= f.text_field :sake_name, class: "input input-bordered border-black w-full" %>
+      </div>
+    </div>
 
-  <%= f.submit "投稿する", class: "btn btn-primary" %>
-  <%= link_to "キャンセル", main_path, class: "btn btn-secondary" %>
+    <div class="divider"></div>
 
-  <button class="bg-cyan-500 shadow-lg shadow-cyan-500/50 ...">Subscribe</button>
-  <button class="outline outline-offset-0 ...">Button A</button>
-  <button class="btn btn-info">Info</button>
+    <div class="card bg-base-300 rounded-box">
+      <div class="p-4">
+        <%= f.label :taste_rating, "口当たり (1-5)", class: "text-xl font-bold" %>
+        <div class="rating rating-lg flex items-center">
+          <%= f.radio_button :taste_rating, 1, class: "rating-hidden" %>
+          <%= f.radio_button :taste_rating, 2, class: "mask mask-star-2" %>
+          <%= f.radio_button :taste_rating, 3, class: "mask mask-star-2" %>
+          <%= f.radio_button :taste_rating, 4, class: "mask mask-star-2" %>
+          <%= f.radio_button :taste_rating, 5, class: "mask mask-star-2" %>
+        </div>
+        <div class="flex justify-between mt-2">
+          <span>甘口</span>
+          <span>辛口</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex space-x-2 mt-4">
+      <%= f.submit "投稿する", class: "btn btn-primary" %>
+      <%= link_to "キャンセル", main_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
 <% end %>

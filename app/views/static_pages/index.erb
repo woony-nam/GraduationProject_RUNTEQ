@@ -1,4 +1,8 @@
-<h1>日本酒いかが</h1>
-<p>このアプリは日本酒の評価やレビューを投稿できるアプリです。</p>
-<%= link_to "サインアップ", age_verification_path, class: "btn btn-primary" %>
-<%= link_to "ログイン", new_user_session_path, class: "btn btn-secondary" %>
+<div class="flex flex-col items-center p-8 bg-base-100 rounded-lg shadow-md" data-theme="business">
+  <h1 class="text-3xl font-bold mb-4">日本酒いかが</h1>
+  <p class="text-lg text-gray-600 mb-6">このアプリは日本酒の評価やレビューを投稿できるアプリです。</p>
+  <div class="flex space-x-4">
+    <button class="btn btn-primary" onclick="location.href='<%= age_verification_path %>'">サインアップ</button>
+    <button class="btn btn-secondary" onclick="location.href='<%= new_user_session_path %>'">ログイン</button>
+  </div>
+</div>

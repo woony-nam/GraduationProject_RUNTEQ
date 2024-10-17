@@ -1,5 +1,5 @@
 <div class="header">
-  <h1>アプリ名</h1>
+  <h1>日本酒いかが</h1>
   <%= link_to '投稿一覧へ', posts_path %>
 </div>
 
@@ -18,22 +18,28 @@
     <% end %>
 
     <div>
-      <%= form.label :title %>
-      <%= form.text_field :title %>
+      <%= form.label :title, "タイトル" %>
+      <%= form.text_field :title, class: "input input-bordered border-black w-full" %>
     </div>
 
     <div>
-      <%= form.label :sake_name %>
-      <%= form.text_field :sake_name %>
+      <%= form.label :sake_name, "銘柄" %>
+      <%= form.text_field :sake_name, class: "input input-bordered border-black w-full" %>
     </div>
 
     <div>
-      <%= form.label :taste_rating %>
-      <%= form.number_field :taste_rating, in: 1..5 %>
+      <%= form.label :taste_rating, "口当たり (1-5)" %>
+      <div class="rating rating-lg flex items-center">
+        <%= form.radio_button :taste_rating, 1, class: "rating-hidden" %>
+        <%= form.radio_button :taste_rating, 2, class: "mask mask-star-2" %>
+        <%= form.radio_button :taste_rating, 3, class: "mask mask-star-2" %>
+        <%= form.radio_button :taste_rating, 4, class: "mask mask-star-2" %>
+        <%= form.radio_button :taste_rating, 5, class: "mask mask-star-2" %>
+      </div>
     </div>
 
     <div>
-      <%= form.submit "更新", class: "bg-blue-500 text-white p-2 rounded" %>
+      <%= form.submit "更新", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
