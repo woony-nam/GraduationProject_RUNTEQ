@@ -13,6 +13,7 @@
 
 [サービスURL](https://nihonshu-com.onrender.com)
 
+[GitHubのproject](https://github.com/users/woony-nam/projects/1)
 
 ## READMEレビュー時にMVPリリース時点で実装予定だった機能
 - [x] トップページ
