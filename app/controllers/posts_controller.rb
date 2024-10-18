@@ -44,8 +44,14 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to main_path, notice: "投稿が削除されました。"
+    if @post.user == current_user
+      @post.destroy
+      flash[:notice] = '投稿が削除されました。'
+      redirect_to main_path # メインページにリダイレクト
+    else
+      flash[:alert] = '削除権限がありません。'
+      redirect_to post_path(@post)
+    end
   end
 
   private

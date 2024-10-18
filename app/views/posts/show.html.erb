@@ -42,6 +42,6 @@
   <p><strong>投稿日 at:</strong> <%= @post.created_at.strftime('%B %d, %Y') %></p>
 
   <%= link_to '編集する', edit_post_path(@post), class: 'btn btn-primary' if current_user == @post.user %>
-  <%= link_to '削除する', post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' if current_user == @post.user %>
+  <%= button_to '削除する', post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' if current_user == @post.user %>
 </div>
 

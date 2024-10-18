@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
-  
+  before_action :set_user, only: [:destroy]
+
+  def show
+    @user
+  end
+
   def edit
     @user = current_user
   end
@@ -16,14 +21,24 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    current_user.destroy
-    redirect_to root_path, notice: 'アカウントが削除されました。'
+    if @user == current_user
+      @user.destroy
+      flash[:notice] = 'アカウントが削除されました。'
+      redirect_to root_path # static_pageにリダイレクト
+    else
+      flash[:alert] = '削除権限がありません。'
+      redirect_to edit_user_path(current_user)
+    end
   end
 
   private
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
   protected
