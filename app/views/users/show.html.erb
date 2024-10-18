@@ -1,0 +1,5 @@
+<div>
+  <%= form_with url: user_path(current_user), method: :delete, local: true do %>
+    <button type="submit" class="btn btn-danger">アカウントを削除</button>
+  <% end %>
+</div>

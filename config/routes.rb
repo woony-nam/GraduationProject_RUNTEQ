@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :age_verification, only: [ :create ] # age_verificationsのルートを定義
   resources :posts, only: [:index, :new, :create, :destroy, :show, :edit, :update]
-  resources :users, only: [:destroy, :edit, :update]
+  resources :users, only: [:destroy, :edit, :update, :show]
 
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
